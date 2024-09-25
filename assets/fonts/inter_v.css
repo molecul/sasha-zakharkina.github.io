@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Inter V';
+	src: url('../fonts/inter_v.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/inter_v.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/inter_v.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/inter_v.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/inter_v.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/inter_v.svg#inter_v') format('svg'); /* Chrome < 4, Legacy iOS */
+}

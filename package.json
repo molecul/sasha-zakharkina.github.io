@@ -1,0 +1,9 @@
+{
+  "name": "sasha_zakharkina",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "justifiedGallery": "^3.8.1"
+  }
+}

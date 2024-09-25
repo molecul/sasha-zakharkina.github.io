@@ -1,0 +1,239 @@
+body {
+  font-family: 'Inter V';
+  font-size: 14px;
+  max-width: 1999px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #F0EFED;
+}
+
+.header__fio {
+  font-size: 20px;
+  font-weight: 100;
+  padding-top: 64px;
+}
+
+.header__designer {
+  font-size: 79px;
+  font-weight: 100;
+  margin: 20px 0;
+}
+
+.header__photo {
+  width: 100%;
+  height: 100%;
+}
+
+.header__info {
+  text-align: center;
+}
+
+.header__elipsis {
+  display: none;
+}
+
+@media (min-width: 821px) {
+  .header__wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .header__photo {
+    width: 400px;
+    height: 400px;
+  }
+
+  .header__info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .header__fio {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1220px) {
+  .header__elipsis {
+    display: block;
+  }
+}
+
+  /* галлерея вариант 1 */
+ /* .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 10px;
+  justify-items: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+} */
+
+
+/* галерея вариант 2 */
+
+/* .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  justify-items: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+} */
+
+/* галерея вариант 3 */
+
+.gallery {
+  column-count: 1; /* Количество колонок */
+  column-gap: 10px; /* Отступы между колонками */
+  padding: 10px;
+}
+
+/* Стили для изображений в галерее */
+.gallery img {
+  width: 100%; /* Устанавливаем ширину изображения в 100% относительно колонки */
+  margin-bottom: 10px; /* Отступы между изображениями по вертикали */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавление теней */
+  transition: transform 0.2s ease; /* Анимация на hover */
+}
+
+/* Увеличение при наведении */
+.gallery img:hover {
+  transform: scale(1.02);
+}
+
+@media (min-width: 640px) {
+  .gallery {
+    column-count: 2; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    column-count: 3; 
+  }
+}
+
+@media (min-width: 1500px) {
+  .gallery {
+    column-count: 4; 
+  }
+}
+
+
+/* Lightbox (модальное окно) */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+/* Увеличенное изображение */
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Видимое изображение */
+.lightbox img.visible {
+  opacity: 1;
+}
+
+/* Кнопка закрытия */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Стрелки для навигации */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1001;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Индикаторы */
+.indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.indicator.active {
+  opacity: 1;
+  background-color: #f7d94c;
+}
+
+@media (max-width: 640px) {
+  .gallery {
+      grid-template-columns: 1fr;
+  }
+}

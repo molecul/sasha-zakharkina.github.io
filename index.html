@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sasha Zakharkina | Designer</title>
+  <meta name="description" content="Sasha Zakharkina. Designer">
+  <meta name="author" content="Кодер">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sasha.site/">
+  <meta property="og:description" content="Sasha Zakharkina. Designer">
+  <!-- <meta property="og:image" content="image.png"> -->
+  <!-- <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"> -->
+  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+  <link rel="stylesheet" href="./src/css/reset.css" />
+  <link rel="stylesheet" href="./assets/fonts/inter_v.css" />
+  <link rel="stylesheet" href="./src/css/index.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="header__info">
+        <div class="header__fio">
+          Sasha Zakharkina
+        </div>
+        <div class="header__designer">
+          designer
+        </div>
+        <div class="header__elipsis">
+          <img src="./assets/img/Ellipses.svg" alt="Ellipses" />
+        </div>
+      </div>
+      <img class="header__photo" src="./assets/img/myphoto.png" alt="my_photo" />
+    </div>
+  </header>
+  <main>
+    <div class="gallery" id="gallery">
+    </div>
+  </main>
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <span class="nav-arrow prev" id="prevBtn">&#10094;</span> <!-- Левая стрелка -->
+    <img id="lightboxImage" src="" alt="Large Image">
+    <span class="nav-arrow next" id="nextBtn">&#10095;</span> <!-- Правая стрелка -->
+    <div class="indicators" id="indicators"></div>
+  </div>
+  <script type="text/javascript" defer src="./src/js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript" defer src="./src/js/index.js"></script>
+</body>
+
+</html>
